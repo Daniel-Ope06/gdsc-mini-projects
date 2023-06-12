@@ -1,2 +1,40 @@
 // import Dancing Script font
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    //background: black
+}
+
+
+
+$dancing-font: 'Dancing Script', cursive;
+
+$dream-white: lch(98.78% 6.5 101.59);
+$dream-blue: lch(19.99% 26.51 277.21);
+$dream-green: lch(78.16% 27.47 187.72);
+$dream-brown: lch(21.09% 14.9 27.97);
+$dream-brown-transparent: lch(21.09% 14.9 27.97 / .7);
+
+.dream-text-outline {
+    text-shadow:
+        -1px -1px 0 $dream-brown,
+        1px -1px 0 $dream-brown,
+        -1px 1px 0 $dream-brown,
+        1px 1px 0 $dream-brown;
+}
+
+.dream-floating-icon {
+    height: 4rem;
+    width: 4rem;
+    object-fit: contain;
+
+    transition: filter 0.3s ease-in-out;
+    -webkit-filter: drop-shadow( 3px 4px 2px $dream-brown-transparent);
+    filter: drop-shadow( 3px 4px 2px $dream-brown-transparent);
+
+    &:hover {
+        -webkit-filter: drop-shadow( 0px 0px 0px $dream-brown-transparent);
+        filter: drop-shadow( 0px 0px 0px $dream-brown-transparent);
+    }
+}
