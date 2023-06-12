@@ -1,1 +1,11 @@
-<p>dream-nav-bar works!</p>
+<div class="nav-bar">
+    <h1 class="nav-logo text-outline">Dream Catcher</h1>
+    <div class="socials">
+        <a *ngFor="let icon of socialIcons"
+        class="social-icon" [title]="icon.name"
+        [href]="icon.link" target="_blank" rel="noopener noreferrer"
+        >
+            <img [src]="'../../../../assets/icons/' + icon.path" alt="social icon">
+        </a>
+    </div>
+</div>
