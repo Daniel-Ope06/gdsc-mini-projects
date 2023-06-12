@@ -32,12 +32,6 @@ $dream-brown: lch(21.09% 14.9 27.97);
     flex-direction: row;
     align-items: flex-start;
     gap: 1.5rem;
-
-    img {
-        height: 4rem;
-        width: 4rem;
-        object-fit: contain;
-    }
 }
 
 @media screen and (width < 1024px) {
