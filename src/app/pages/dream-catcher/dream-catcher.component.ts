@@ -7,5 +7,16 @@ import { Component } from '@angular/core';
 })
 export class DreamCatcherComponent {
 
-  cloudTexts = ["Love", "Joy", "Peace", "Music", "Bliss", "Magic", "Smile", "Wings"]
+  inputText: string = "";
+  counter: number = 0;
+  cloudTexts = ["", "Joy", "", "Love", "Bliss", "", "Magic", ""]
+
+  generateCloudText() {
+    this.cloudTexts[this.counter] = this.inputText;
+    this.counter++;
+    this.inputText = "";
+    if (this.counter == this.cloudTexts.length) {
+      this.counter = 0;
+    }
+  }
 }
