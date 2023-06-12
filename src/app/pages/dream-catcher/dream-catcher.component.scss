@@ -8,6 +8,7 @@ $dream-brown-transparent: lch(21.09% 14.9 27.97 / .7);
 
 .page {
     min-height: 100vh;
+    padding-bottom: 2rem;
     font-family: $dancing-font;
     background-color: $dream-blue;
     background: linear-gradient(180deg, $dream-blue 0%, $dream-green 100%);
@@ -23,7 +24,7 @@ $dream-brown-transparent: lch(21.09% 14.9 27.97 / .7);
 
 .central-content {
     width: 60%;
-    margin-top: 5%;
+    margin-top: 6rem;
 }
 
 .input-label {
@@ -51,6 +52,7 @@ $dream-brown-transparent: lch(21.09% 14.9 27.97 / .7);
     text-align: center;
     color: $dream-brown;
     font-family: $dancing-font;
+    text-transform: lowercase;
 
     &::placeholder {
         color: $dream-brown-transparent
@@ -70,9 +72,60 @@ $dream-brown-transparent: lch(21.09% 14.9 27.97 / .7);
     &:hover { cursor: pointer; }
 }
 
+.cloud-container {
+    width: 80%;
+    margin-top: 6rem;
+}
+
+.cloud {
+    position: relative;
+    text-align: center;
+    //border: 2px solid red;
+
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+
+      font-weight: 700;
+      font-size: 2.25rem;
+      color: $dream-brown;
+      text-transform: lowercase;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+}
+
+
+
+.cloud-col-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cloud-col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .cloud:nth-child(1) { margin-left: 40%; }
+    .cloud:nth-child(2) { margin-right: 40%; }
+}
+
+
 
 @media screen and (width < 1024px) {
     .central-content { width: 80%;}
     .input-label { font-size: 2.25rem; }
     .form-row { width: 100%; }
+    .cloud-container { width: 100%; }
+
+    .cloud-col-2 {
+        .cloud:nth-child(1) { margin-left: 20%; }
+        .cloud:nth-child(2) { margin-right: 20%; }
+    }
 }

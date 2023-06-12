@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class DreamCatcherComponent {
 
+  cloudTexts = ["Love", "Joy", "Peace", "Music", "Bliss", "Magic", "Smile", "Wings"]
 }

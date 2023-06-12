@@ -5,11 +5,43 @@
 
     <div class="central-content flex-column">
         <h1 class="input-label dream-text-outline">Capture Your Dreams</h1>
+
         <form class="form-row">
             <input type="text" class="input-field dream-floating-icon" placeholder="Write your floating words..">
             <button type="submit" class="submit-btn" title="Submit">
                 <img src="../../../assets/icons/icons8-submit-progress-100.png" class="dream-floating-icon" alt="submit icon"/>
             </button>
         </form>
+
+        <div class="cloud-container">
+            <div class="cloud-col-3">
+                <div *ngFor="let cloudText of cloudTexts | slice:0:3"
+                class="cloud"
+                >
+                    <p>{{ cloudText }}</p>
+                    <img src="../../../assets/icons/icons8-cloud-96.png" alt="cloud"/>
+                </div>
+            </div>
+
+            <div class="cloud-col-2">
+                <div *ngFor="let cloudText of cloudTexts | slice:3:5"
+                class="cloud"
+                >
+                    <p>{{ cloudText }}</p>
+                    <img src="../../../assets/icons/icons8-cloud-96.png" alt="cloud"/>
+                </div>
+            </div>
+
+            <div class="cloud-col-3">
+                <div *ngFor="let cloudText of cloudTexts | slice:5:8"
+                class="cloud"
+                >
+                    <p>{{ cloudText }}</p>
+                    <img src="../../../assets/icons/icons8-cloud-96.png" alt="cloud"/>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 </div>
